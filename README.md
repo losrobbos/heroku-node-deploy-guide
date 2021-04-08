@@ -33,7 +33,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 
 ### Load environment into app
 
-- Install dotenv package npm i dotenv
+- Install dotenv package `npm i dotenv`
 - Load environment variables in server.js with require("dotenv").config()
 - Load environment variables in the seed script too
 
@@ -56,8 +56,8 @@ FRONTEND_ORIGIN=http://localhost:3000
 
 ## Troubleshooting
 
-In case you receive "Application error" on the deployed webpage
-- View the central errors in the error log `heroku logs` or short output `heroku logs --tail`
+In case you receive "Application error" on any route of the deployed webpage
+- View the central errors in the error log `heroku logs` or just output last error `heroku logs --tail`
 
 Common issues:
 - forgot to use `process.env.PORT` as port to listen too?
