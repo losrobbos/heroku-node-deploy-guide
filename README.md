@@ -41,7 +41,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 - Add & Commit all code changes
 
 
-### Setup Heroku app & deployment
+## Setup Heroku app & deployment
 
 - Login to Heroku: `heroku login`
 - Create Heroku app: `heroku apps:create YOUR_APP_NAME`
