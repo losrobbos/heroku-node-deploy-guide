@@ -50,7 +50,7 @@ FRONTEND_ORIGIN=http://localhost:3000
   - in terminal: `heroku config:set KEY=VALUE`
 
 - For each KEY=VALUE pair in your .env file you need to create an environment entry on the Heroku server too! (because we will neve add and push the .env file, neither to Github nor to Heroku)
-- 
+
 - Example for setting environment variables from terminal:
   - `heroku config:set MONGO_URI=<yourConnectionString>`
   - `heroku config:set FRONTEND_ORIGIN=http://localhost:3000`
