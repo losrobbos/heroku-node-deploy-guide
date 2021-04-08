@@ -34,7 +34,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 ### Load environment into app
 
 - Install dotenv package `npm i dotenv`
-- Load environment variables in server.js with require("dotenv").config()
+- Load environment variables in server.js with `require("dotenv").config()`
 - Load environment variables in the seed script too
 
 - Test your app locally, if it still connects to MongoDB (npm start + npm run seed)
