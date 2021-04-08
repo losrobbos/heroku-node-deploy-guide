@@ -63,6 +63,7 @@ Common issues:
 - forgot to use `process.env.PORT` as port to listen too?
 - forgot start script in package.json? Should be `start: "node server.js"`
 - env variables spelling issues? compare `heroku config` with your keys in .env file - mismatch?
-
+- forgot to install dotenv and load it at the beginning of your entry script (`require("dotenv").config()` ?
+- you were simply to lazy to read this guide fully? ;-)
 
 DONE!
