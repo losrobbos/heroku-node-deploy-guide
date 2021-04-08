@@ -54,7 +54,7 @@ FRONTEND_ORIGIN=http://localhost:3000
   - `heroku config:set MONGO_URI=<yourConnectionString>`
   - `heroku config:set FRONTEND_ORIGIN=http://localhost:3000`
   - `heroku config:set JWT_SECRET=<yourHolySecret>`
-  - adapt the values accordingly
+  - adapt the values accordingly (e.g. it is important that you state a MONGO_URI connection string, that Heroku can reach. E.g. a DB on your ATLAS cluster).
 
 - Check if environment variables were placed successfully on Heroku server: `heroku config`
 
