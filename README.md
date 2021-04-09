@@ -40,6 +40,8 @@ FRONTEND_ORIGIN=http://localhost:3000
 - Test your app locally, if it still connects to MongoDB (npm start + npm run seed)
 - Add & Commit all code changes
 
+Important: The environment variables we setup in the .env file are just used during LOCAL development on our machine! We will see how we can setup the same environment variables (but with possibly different values!) on Heroku in the next section.
+
 
 ## Setup Heroku app & deployment
 
@@ -49,7 +51,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 - Create environment variables on Heroku (either in app settings online: https://dashboard.heroku.com/apps or in terminal)
   - in terminal: `heroku config:set KEY=VALUE`
 
-- For each KEY=VALUE pair in your .env file you need to create an environment entry on the Heroku server too! (because we will neve add and push the .env file, neither to Github nor to Heroku)
+- For each KEY=VALUE pair in your .env file you need to create an environment entry on the Heroku server too! (because we will never add and push the .env file, neither to Github nor to Heroku)
 
 - Example for setting environment variables from terminal:
   - `heroku config:set MONGO_URI=<yourConnectionString>`
