@@ -17,6 +17,12 @@ https://devcenter.heroku.com/articles/deploying-nodejs
 
 ## Deployment preparation in code
 
+### Adapt start script in package.json
+
+Check that in your start script you start your app with "node" and not "nodemon".
+
+Nodemon is not installed by default on Heroku. But node is. So make sure that you startup your app with node.
+
 ### Oursource confidential information
 
 - Create a file .env (in top level of your project)
