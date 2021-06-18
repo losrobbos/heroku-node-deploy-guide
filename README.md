@@ -73,6 +73,8 @@ Important: The environment variables we setup in the .env file are just used dur
   - this will give you now a list with all the variables and their values on Heroku 
 
 - Perform Deploy: `git push heroku <yourLocalBranchName>:main`
+  - in case you always just deploy the main or master branch, you can checkout that branch and just do `git push heroku main`
+
 - Optional: Perform seed against Heroku database (in case you use a different one locally & centrally): `heroku run "npm run seed"`
 - Open Webpage: `heroku open`
 
