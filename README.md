@@ -21,7 +21,11 @@ https://devcenter.heroku.com/articles/deploying-nodejs
 
 Check that in your start script you start your app with "node" and not "nodemon".
 
-Nodemon is not installed by default on Heroku. But node is. So make sure that you startup your app with node.
+Nodemon is not installed by default on Heroku. But node is. So make sure that you startup your app with node:
+
+```
+  "start": "node server.js" // please replace "server.js" with your main backend file
+```
 
 ### Oursource confidential information
 
