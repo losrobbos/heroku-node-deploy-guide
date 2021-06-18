@@ -32,10 +32,30 @@ Nodemon is not installed by default on Heroku. But node is. So make sure that yo
 - Create a file .env (in top level of your project)
 - Outsource all confidential info like secrets + DB connection strings + allowed Frontend URL into .env file
 - Add .env to gitignore to prevent secrets being pushed to our codebase
-- Adapt PORT too (process.env.PORT) => because we cannot dictate the port on provider
-
 A typical sample .env file:
 ```
+MONGO_URI=mongodb+srv://youruser:youruser@your-cluster.mongodb.net/your_db?retryWrites=true&w=majority
+JWT_SECRET=silencio_i_am_secret
+FRONTEND_ORIGIN=http://localhost:3000
+```
+
+
+### Adapt the PORT you start your server on
+
+Instead of connecting to a hardcoded port like e.g. 5000 Heroku will provide you with a dedicated, random port, that you can connect to.
+
+This port is acailable in the environment variable `process.env.PORT`
+
+Now we have to use that one when starting up our server:
+
+`app.listen( process.env.PORT, () => ....)`
+
+But when you run your backend locally, this will not work, because locally process.env.PORT is not set / empty.
+
+So you have to add the PORT you wanna use locally to your .env file too:
+
+```
+PORT=5000
 MONGO_URI=mongodb+srv://youruser:youruser@your-cluster.mongodb.net/your_db?retryWrites=true&w=majority
 JWT_SECRET=silencio_i_am_secret
 FRONTEND_ORIGIN=http://localhost:3000
