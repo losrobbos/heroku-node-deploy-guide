@@ -70,6 +70,7 @@ Important: The environment variables we setup in the .env file are just used dur
   - adapt the values accordingly (e.g. it is important that you state a MONGO_URI connection string, that Heroku can reach. E.g. a DB on your ATLAS cluster).
 
 - Check if environment variables were placed successfully on Heroku server: `heroku config`
+  - this will give you now a list with all the variables and their values on Heroku 
 
 - Perform Deploy: `git push heroku <yourLocalBranchName>:main`
 - Optional: Perform seed against Heroku database (in case you use a different one locally & centrally): `heroku run "npm run seed"`
