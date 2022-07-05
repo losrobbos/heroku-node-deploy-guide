@@ -14,6 +14,7 @@ Find here the general guideline for the creation & deployment of NodeJS APIs:
 
 https://devcenter.heroku.com/articles/deploying-nodejs
 
+Hint: This guide does not deal with the GitHub integration where you can upload the content of your GitHub repository directly to Heroku using their user interface. This guide deals with deployment from the terminal only.
 
 ## Deployment preparation in code
 
@@ -44,7 +45,7 @@ FRONTEND_ORIGIN=http://localhost:3000
 
 Instead of connecting to a hardcoded port like e.g. 5000 Heroku will provide you with a dedicated, random port, that you can connect to.
 
-This port is acailable in the environment variable `process.env.PORT`
+This port is available in the environment variable `process.env.PORT`
 
 Now we have to use that one when starting up our server:
 
@@ -60,6 +61,10 @@ MONGO_URI=mongodb+srv://youruser:youruser@your-cluster.mongodb.net/your_db?retry
 JWT_SECRET=silencio_i_am_secret
 FRONTEND_ORIGIN=http://localhost:3000
 ```
+
+Alternatively you can provide a default port in case process.env.PORT is not existing:
+
+`app.listen( process.env.PORT || 5000, () => ...)`
 
 ### Load environment into app
 
